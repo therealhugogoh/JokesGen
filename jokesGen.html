@@ -1,0 +1,50 @@
+<html>
+        <body><html>
+<h1>Random Jokes Generator</h1>
+<div id="Joke-Container"></div>
+<p id="Joke-Text">Click The Button! </p>
+<button  id="GenJoke" onclick="generateJokes()">Generate Joke</button>
+
+</html>
+</body>
+        <style>body{
+    text-align: center;
+background-image: url(https://www.hollywoodreporter.com/wp-content/uploads/2013/07/despicable_me_2_6.jpg
+);
+
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+h1{
+    color: cyan;
+}
+p{
+    background-color: white;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 8px;
+    border-color: white;
+}
+button{
+   background-color: palegoldenrod;
+    border-radius: 3px;
+    padding: 10px 20px;
+   
+    border-color: palegoldenrod;
+   
+}</style>
+        <script>function generateJokes() {
+
+    var jokes =  [
+"Why did the scarecrow win an award? Because he was outstanding in his field!",
+"What did one ocean say to the other ocean? Nothing, they just waved.",
+"Why don't scientists trust atoms? Because they made up everything!"
+    ];
+    var randomIndex =   Math.floor(Math.random() * jokes.length);
+
+    var jokeContainer = document.getElementById ("Joke-Text");
+    jokeContainer.textContent = jokes[randomIndex];
+}
+</script>
+      </html>
